@@ -26,9 +26,22 @@ public class SpringTest {
 		System.out.println(search.get(0).getName());
 	}
 	
-	@Test
+	//@Test
 	public void testFindUserById(){
 		User user = dao.findUserById(7);
 		System.out.println(user);
+	}
+	
+//	@Test
+	public void listAllUser(){
+		List<User> list = dao.findAllUser();
+		for(User u:list){
+			System.out.println(u);
+		}
+	}
+	
+	@Test
+	public void deleteUserById(){
+		dao.DeleteUserById(7);
 	}
 }

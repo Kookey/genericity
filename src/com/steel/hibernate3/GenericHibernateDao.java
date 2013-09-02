@@ -63,6 +63,7 @@ public class GenericHibernateDao<T extends Serializable,PK extends Serializable>
 		return t;
 	}
 
+	@SuppressWarnings("unchecked")
 	@Override
 	public List<T> findByExample(T user) {
 		return getHibernateTemplate().findByExample(user);

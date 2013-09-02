@@ -11,4 +11,8 @@ public interface UserDao {
 	public List<User> search(User user);
 	
 	public User findUserById (int id);
+	
+	public List<User> findAllUser();
+	
+	public void DeleteUserById(int id);
 }

@@ -26,4 +26,14 @@ public class UserDaoImpl extends GenericHibernateDao<User,Integer> implements Us
 	public User findUserById(int id) {
 		return this.get(id);
 	}
+
+	@Override
+	public List<User> findAllUser() {
+		return this.loadAll();
+	}
+
+	@Override
+	public void DeleteUserById(int id) {
+		this.deleteById(id);
+	}
 }
